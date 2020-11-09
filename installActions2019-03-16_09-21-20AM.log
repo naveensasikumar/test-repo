@@ -1,0 +1,660 @@
+Using paramFile: C:\Users\S.Naveen\Downloads\database 2\install\oraparam.ini
+
+
+Checking monitor: must be configured to display at least 256 colors.    Actual 4294967296    Passed
+
+The commandline for unzip:
+C:\Users\S.Naveen\Downloads\database 2\install\unzip -qqqo ..\stage\Components\oracle.jdk\1.5.0.17.03\1\DataFiles/"*.jar" -d "C:\Users\S681E~1.NAV\AppData\Local\Temp\OraInstall2019-03-16_09-21-20AM" INFO: Loading data from: jar:file:/C:/Users/S.Naveen/AppData/Local/Temp/OraInstall2019-03-16_09-21-20AM/ext/jlib/installcommons_1.0.0b.jar!/oracle/install/driver/oui/resource/ConfigCommandMappings.xml
+INFO: Loading beanstore from jar:file:/C:/Users/S.Naveen/AppData/Local/Temp/OraInstall2019-03-16_09-21-20AM/ext/jlib/installcommons_1.0.0b.jar!/oracle/install/driver/oui/resource/ConfigCommandMappings.xml
+INFO: Restoring class oracle.install.driver.oui.ConfigCmdMappings from jar:file:/C:/Users/S.Naveen/AppData/Local/Temp/OraInstall2019-03-16_09-21-20AM/ext/jlib/installcommons_1.0.0b.jar!/oracle/install/driver/oui/resource/ConfigCommandMappings.xml
+INFO: Verifying target environment...
+INFO: Checking whether the IP address of the localhost could be determined...
+INFO: Completed verification of target environment.
+INFO: Inventory exists: false
+INFO: Registering setup bean
+INFO: Building Flow
+INFO: Building the flow graph
+INFO: Loaded state prepInstall
+INFO: Loaded state decideOCMInstall
+INFO: Loaded state getOCMDetails
+INFO: Loaded state installOptions
+INFO: Loaded state getSystemClass
+INFO: Loaded state nodeSelectionPage
+INFO: Loaded state upgradeValidation
+INFO: Loaded state installType
+INFO: Loaded state quickInstallPage
+INFO: Loaded state productLanguage
+INFO: Loaded state inventoryPage
+INFO: Loaded state getOracleHome
+INFO: Loaded state dbEdition
+INFO: Loaded state configurationType
+INFO: Loaded state dbIdentifier
+INFO: Loaded state configurationOption
+INFO: Loaded state managementOption
+INFO: Loaded state storageOption
+INFO: Loaded state recoveryOption
+INFO: Loaded state selectASMDiskGroups
+INFO: Loaded state schemaPasswordDialog
+INFO: Loaded state getPrivilegedOSGroups
+INFO: Loaded state prereqExecutionDecider
+INFO: Loaded state performChecks
+INFO: Loaded state showSummary
+INFO: Loaded state setup
+INFO: Loaded state finish
+INFO: Linking states 
+INFO: State[configurationOption]: route=success; to=managementOption
+INFO: State[configurationType]: route=success; to=dbIdentifier
+INFO: State[dbEdition]: route=oraclehome_location; to=getOracleHome
+INFO: State[dbIdentifier]: route=success; to=configurationOption
+INFO: State[decideOCMInstall]: route=ignoreOCM; to=installOptions
+INFO: State[decideOCMInstall]: route=requireOCM; to=getOCMDetails
+INFO: State[getOCMDetails]: route=success; to=installOptions
+INFO: State[getOracleHome]: route=advanced_yes_createDB_yes; to=configurationType
+INFO: State[getOracleHome]: route=advanced_yes_inventory_no; to=inventoryPage
+INFO: State[getOracleHome]: route=advanced_yes_softwareDB_yes; to=prereqExecutionDecider
+INFO: State[getOracleHome]: route=advanced_yes_upgrade_yes; to=prereqExecutionDecider
+INFO: State[getPrivilegedOSGroups]: route=success; to=prereqExecutionDecider
+INFO: State[getSystemClass]: route=desktop_class_yes; to=quickInstallPage
+INFO: State[getSystemClass]: route=server_class_yes; to=nodeSelectionPage
+INFO: State[installOptions]: route=advanced_yes_softwareDB_yes; to=nodeSelectionPage
+INFO: State[installOptions]: route=migrate_yes_clusterware_no; to=upgradeValidation
+INFO: State[installOptions]: route=migrate_yes_clusterware_yes; to=nodeSelectionPage
+INFO: State[installOptions]: route=system_class; to=getSystemClass
+INFO: State[installType]: route=advanced_yes; to=productLanguage
+INFO: State[installType]: route=basic_yes; to=quickInstallPage
+INFO: State[inventoryPage]: route=advanced_yes_createDB_yes; to=configurationType
+INFO: State[inventoryPage]: route=advanced_yes_softwareDB_yes; to=prereqExecutionDecider
+INFO: State[inventoryPage]: route=basic_yes; to=prereqExecutionDecider
+INFO: State[managementOption]: route=success; to=storageOption
+INFO: State[nodeSelectionPage]: route=create_and_configureDB; to=installType
+INFO: State[nodeSelectionPage]: route=software_onlyDB; to=productLanguage
+INFO: State[nodeSelectionPage]: route=upgradeDB; to=upgradeValidation
+INFO: State[performChecks]: route=success; to=showSummary
+INFO: State[prepInstall]: route=success; to=decideOCMInstall
+INFO: State[prereqExecutionDecider]: route=executeprereqs; to=performChecks
+INFO: State[prereqExecutionDecider]: route=ignoreprereqs; to=showSummary
+INFO: State[productLanguage]: route=productlanguage_yes; to=dbEdition
+INFO: State[quickInstallPage]: route=basic_yes_inventory_no; to=inventoryPage
+INFO: State[quickInstallPage]: route=basic_yes_inventory_yes; to=prereqExecutionDecider
+INFO: State[recoveryOption]: route=asm_chosen_asm_not_present; to=schemaPasswordDialog
+INFO: State[recoveryOption]: route=asm_chosen_asm_present; to=selectASMDiskGroups
+INFO: State[recoveryOption]: route=asm_not_chosen; to=schemaPasswordDialog
+INFO: State[schemaPasswordDialog]: route=success; to=prereqExecutionDecider
+INFO: State[selectASMDiskGroups]: route=success; to=schemaPasswordDialog
+INFO: State[setup]: route=success; to=finish
+INFO: State[showSummary]: route=success; to=setup
+INFO: State[storageOption]: route=success; to=recoveryOption
+INFO: State[upgradeValidation]: route=success; to=productLanguage
+INFO: Successfully built the flow
+INFO: Opening bean stores from which the beans can be loaded
+INFO: Loading beanstore from a given input stream
+INFO: Translating external format into raw format 
+INFO: Registering the flow data beans
+INFO: [INS-07001] Value for property 'oracle_install_RACInstall' not found in the bean store.
+INFO: [INS-07001] Value for property 'CLUSTER_NODES' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_OSDBA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_OSOPER' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_GlobalDBName' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SID' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_StorageType' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CustomInstall' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SystemClass' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_QuickInstallOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_AllocatedMemory' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_AutoMemoryOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ConfigurationType' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EMCentralAgentSelected' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_MountPointLocation' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_LaunchDBCA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SecureConfigDisabled' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EnableAutoBackup' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_LoadExampleSchemas' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ReceiveEmailNotification' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_UseDBControl' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_UseFileSystemForRecovery' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_UseSamePassword' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_LaunchNetCA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_LaunchODMA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_NoMigration' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_RDBMSInstalling' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SetOracleBase' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle.install.db.isCCRAuthenticationUsed' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_client_OraMTSPortNumber' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ConfigTabSelected' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CharSetOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_Type' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallOptionSelected' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_DiskGroupNameForASM' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EMEmailAddress' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EMSMTPServer' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_RecoveryBackUpPassword' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_RecoveryBackUpLocation' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_RecoveryBackUpUsername' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SuperAdminSamePasswdForAll' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ASMSNMPUserPassword' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SuperAdminPasswords' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallEdition' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CharacterSet' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_DiskGroupName' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_OCR_PartitionLocation' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallType' not found in the bean store.
+INFO: [INS-07001] Value for property 'INSTALL_TYPE' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_StarterDatabaseType' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CustomComponents' not found in the bean store.
+INFO: [INS-07001] Value for property 'ORACLE_HOME' not found in the bean store.
+INFO: [INS-07001] Value for property 'ORACLE_BASE' not found in the bean store.
+INFO: [INS-07001] Value for property 'FROM_LOCATION' not found in the bean store.
+INFO: [INS-07001] Value for property 'TOPLEVEL_COMPONENT' not found in the bean store.
+INFO: [INS-07001] Value for property 'TopLevelComponentVersion' not found in the bean store.
+INFO: [INS-07001] Value for property 'b_rdbmsInstall' not found in the bean store.
+INFO: [INS-07001] Value for property 'INVENTORY_LOCATION' not found in the bean store.
+INFO: [INS-07001] Value for property 'UNIX_GROUP_NAME' not found in the bean store.
+INFO: [INS-07001] Value for property 'COLLECTOR_RESPONSE_FILE' not found in the bean store.
+INFO: [INS-07001] Value for property 'MYORACLESUPPORT_USERNAME' not found in the bean store.
+INFO: [INS-07001] Value for property 'MYORACLESUPPORT_PASSWORD' not found in the bean store.
+INFO: [INS-07001] Value for property 'DECLINE_SECURITY_UPDATES' not found in the bean store.
+INFO: [INS-07001] Value for property 'PROXY_HOST' not found in the bean store.
+INFO: [INS-07001] Value for property 'PROXY_PORT' not found in the bean store.
+INFO: [INS-07001] Value for property 'PROXY_USER' not found in the bean store.
+INFO: [INS-07001] Value for property 'PROXY_PWD' not found in the bean store.
+INFO: [INS-07001] Value for property 'SECURITY_UPDATES_VIA_MYORACLESUPPORT' not found in the bean store.
+INFO: [INS-07001] Value for property 'COLLECTOR_IGNORE_FAILURES' not found in the bean store.
+INFO: [INS-07001] Value for property 'COLLECTOR_IGNORE_CONFIGURATION' not found in the bean store.
+INFO: [INS-07001] Value for property 'SELECTED_LANGUAGES' not found in the bean store.
+INFO: [INS-07001] Value for property 'ORACLE_HOSTNAME' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_RACInstall' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_SystemClass' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_QuickInstallOption' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_ConfigurationType' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_LaunchDBCA' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_LaunchNetCA' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_LaunchODMA' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_NoMigration' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_RDBMSInstalling' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_SetOracleBase' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle.install.db.isCCRAuthenticationUsed' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_client_OraMTSPortNumber' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_Type' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_SuperAdminSamePasswdForAll' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_DiskGroupName' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_OCR_PartitionLocation' not found in the bean store.
+WARNING: [INS-07001] Value for property 'oracle_install_db_InstallType' not found in the bean store.
+WARNING: [INS-07001] Value for property 'INSTALL_TYPE' not found in the bean store.
+WARNING: [INS-07001] Value for property 'FROM_LOCATION' not found in the bean store.
+WARNING: [INS-07001] Value for property 'TOPLEVEL_COMPONENT' not found in the bean store.
+WARNING: [INS-07001] Value for property 'TopLevelComponentVersion' not found in the bean store.
+WARNING: [INS-07001] Value for property 'b_rdbmsInstall' not found in the bean store.
+WARNING: [INS-07001] Value for property 'COLLECTOR_RESPONSE_FILE' not found in the bean store.
+WARNING: [INS-07001] Value for property 'COLLECTOR_IGNORE_FAILURES' not found in the bean store.
+WARNING: [INS-07001] Value for property 'COLLECTOR_IGNORE_CONFIGURATION' not found in the bean store.
+INFO: Set value for bean DBSetupBean
+INFO: [INS-07001] Value for property 'oracle_install_RACInstall' not found in the bean store.
+INFO: [INS-07001] Value for property 'CLUSTER_NODES' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_OSDBA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_OSOPER' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_GlobalDBName' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SID' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_StorageType' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CustomInstall' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SystemClass' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_QuickInstallOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_AllocatedMemory' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_AutoMemoryOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ConfigurationType' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EMCentralAgentSelected' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_MountPointLocation' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_LaunchDBCA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SecureConfigDisabled' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EnableAutoBackup' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_LoadExampleSchemas' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ReceiveEmailNotification' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_UseDBControl' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_UseFileSystemForRecovery' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_UseSamePassword' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_LaunchNetCA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_LaunchODMA' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_NoMigration' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_RDBMSInstalling' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SetOracleBase' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle.install.db.isCCRAuthenticationUsed' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_client_OraMTSPortNumber' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ConfigTabSelected' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CharSetOption' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_Type' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallOptionSelected' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_DiskGroupNameForASM' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EMEmailAddress' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_EMSMTPServer' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_RecoveryBackUpPassword' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_RecoveryBackUpLocation' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_RecoveryBackUpUsername' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SuperAdminSamePasswdForAll' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_ASMSNMPUserPassword' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_SuperAdminPasswords' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallEdition' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CharacterSet' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_DiskGroupName' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_OCR_PartitionLocation' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_InstallType' not found in the bean store.
+INFO: [INS-07001] Value for property 'INSTALL_TYPE' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_StarterDatabaseType' not found in the bean store.
+INFO: [INS-07001] Value for property 'oracle_install_db_CustomComponents' not found in the bean store.
+INFO: [INS-07001] Value for property 'ORACLE_HOME' not found in the bean store.
+INFO: [INS-07001] Value for property 'ORACLE_BASE' not found in the bean store.
+INFO: [INS-07001] Value for property 'FROM_LOCATION' not found in the bean store.
+INFO: [INS-07001] Value for property 'TOPLEVEL_COMPONENT' not found in the bean store.
+INFO: [INS-07001] Value for property 'TopLevelComponentVersion' not found in the bean store.
+WARNING: Failed to load bean oracle.install.ivw.db.bean.DBInstallSettings. Reason: [INS-07001] Value for property 'DBInstallSettings' not found in the bean store.
+INFO: Closing bean stores from which the beans can be loaded
+INFO: Registering the flow views
+INFO: Adding View[type: oracle.install.commons.base.interview.common.view.PrereqGUI viewId: null uiType: null]
+INFO: oracle.install.commons.base.interview.common.view.PrereqGUI added to View Type Registry with the key as [PrereqUI]
+INFO: Adding View[type: oracle.install.commons.base.interview.common.view.SummaryGUI viewId: null uiType: null]
+INFO: oracle.install.commons.base.interview.common.view.SummaryGUI added to View Type Registry with the key as [SummaryUI]
+INFO: Adding View[type: oracle.install.commons.base.interview.common.view.SetupGUI viewId: null uiType: null]
+INFO: oracle.install.commons.base.interview.common.view.SetupGUI added to View Type Registry with the key as [SetupUI]
+INFO: Adding View[type: oracle.install.ivw.common.view.InventoryUI viewId: null uiType: null]
+INFO: oracle.install.ivw.common.view.InventoryUI added to View Type Registry with the key as [InventoryUI]
+INFO: Adding View[type: oracle.install.ivw.common.view.ProductLanguageGUI viewId: ProductLanguageUI uiType: null]
+INFO: oracle.install.ivw.common.view.ProductLanguageGUI added to View Type Registry with the key as [ProductLanguageUI]
+INFO: Adding View[type: oracle.install.ivw.common.view.OCMDetailsGUI viewId: OCMDetailsUI uiType: null]
+INFO: oracle.install.ivw.common.view.OCMDetailsGUI added to View Type Registry with the key as [OCMDetailsUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.ConfigurationTypeUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.ConfigurationTypeUI added to View Type Registry with the key as [ConfigurationTypeUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.DBIdentifierUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.DBIdentifierUI added to View Type Registry with the key as [DBIdentifierUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.ConfigurationOptionsUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.ConfigurationOptionsUI added to View Type Registry with the key as [ConfigurationOptionsUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.ManagementOptionsUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.ManagementOptionsUI added to View Type Registry with the key as [ManagementOptionsUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.StorageOptionsUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.StorageOptionsUI added to View Type Registry with the key as [StorageOptionsUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.RecoveryBackupUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.RecoveryBackupUI added to View Type Registry with the key as [RecoveryBackupUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.ASMDiskGroupSelectionGUI viewId: ASMDiskGroupSelectionUI uiType: null]
+INFO: oracle.install.ivw.db.view.ASMDiskGroupSelectionGUI added to View Type Registry with the key as [ASMDiskGroupSelectionUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.SchemaPasswordUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.SchemaPasswordUI added to View Type Registry with the key as [SchemaPasswordUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.QuickInstallUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.QuickInstallUI added to View Type Registry with the key as [QuickInstallUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.InstallOptionsUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.InstallOptionsUI added to View Type Registry with the key as [InstallOptionsUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.SystemClassUI viewId: SystemClassUI uiType: null]
+INFO: oracle.install.ivw.db.view.SystemClassUI added to View Type Registry with the key as [SystemClassUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.InstallLocationUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.InstallLocationUI added to View Type Registry with the key as [InstallLocationUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.DBEditionGUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.DBEditionGUI added to View Type Registry with the key as [DBEditionUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.NodeSelectionUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.NodeSelectionUI added to View Type Registry with the key as [NodeSelectionUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.FinishUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.FinishUI added to View Type Registry with the key as [FinishUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.PrivilegedOSGroupsGUI viewId: null uiType: null]
+INFO: oracle.install.ivw.db.view.PrivilegedOSGroupsGUI added to View Type Registry with the key as [PrivilegedOSGroupsUI]
+INFO: Adding View[type: oracle.install.ivw.db.view.InstallTypeGUI viewId: installTypeUI uiType: null]
+INFO: oracle.install.ivw.db.view.InstallTypeGUI added to View Type Registry with the key as [installTypeUI]
+INFO: Initial values of Setup Properties :
+----------------------------------------------------------------------------------------------------
+ PROPERTY                                      VALUE                                               
+----------------------------------------------------------------------------------------------------
+ CLUSTER_NODES                                 {}                                                  
+ COLLECTOR_IGNORE_CONFIGURATION                false                                               
+ COLLECTOR_IGNORE_FAILURES                     false                                               
+ COLLECTOR_RESPONSE_FILE                                                                           
+ DECLINE_SECURITY_UPDATES                      false                                               
+ FROM_LOCATION                                 C:\Users\S.Naveen\Downloads\database 2\install\../s 
+                                               tage/products.xml                                   
+ INSTALL_TYPE                                  EE                                                  
+ MYORACLESUPPORT_PASSWORD                      *Protected value, not to be logged*                 
+ MYORACLESUPPORT_USERNAME                                                                          
+ ORACLE_BASE                                                                                       
+ ORACLE_HOME                                                                                       
+ ORACLE_HOSTNAME                               LAPTOP-DVO2TTNS                                     
+ PROXY_HOST                                                                                        
+ PROXY_PORT                                                                                        
+ PROXY_PWD                                     *Protected value, not to be logged*                 
+ PROXY_USER                                                                                        
+ SECURITY_UPDATES_VIA_MYORACLESUPPORT          true                                                
+ SELECTED_LANGUAGES                            {"en"}                                              
+ b_rdbmsInstall                                true                                                
+ oracle.install.db.isCCRAuthenticationUsed     false                                               
+ oracle_install_LaunchNetCA                    false                                               
+ oracle_install_NoMigration                    false                                               
+ oracle_install_OCR_PartitionLocation                                                              
+ oracle_install_RACInstall                     false                                               
+ oracle_install_RDBMSInstalling                true                                                
+ oracle_install_client_OraMTSPortNumber        49152                                               
+ oracle_install_db_ASMSNMPUserPassword         *Protected value, not to be logged*                 
+ oracle_install_db_AutoMemoryOption            false                                               
+ oracle_install_db_CharSetOption               3                                                   
+ oracle_install_db_CharacterSet                                                                    
+ oracle_install_db_ConfigTabSelected           0                                                   
+ oracle_install_db_ConfigurationType           &General Purpose / Transaction Processing           
+ oracle_install_db_CustomInstall               false                                               
+ oracle_install_db_DiskGroupName                                                                   
+ oracle_install_db_DiskGroupNameForASM                                                             
+ oracle_install_db_EMCentralAgentSelected                                                          
+ oracle_install_db_EMEmailAddress                                                                  
+ oracle_install_db_EMSMTPServer                                                                    
+ oracle_install_db_EnableAutoBackup            false                                               
+ oracle_install_db_InstallEdition              EE                                                  
+ oracle_install_db_InstallOption               INSTALL_DB_AND_CONFIG                               
+ oracle_install_db_InstallOptionSelected       1                                                   
+ oracle_install_db_InstallType                 EE                                                  
+ oracle_install_db_LaunchDBCA                  false                                               
+ oracle_install_db_LaunchODMA                  false                                               
+ oracle_install_db_LoadExampleSchemas          false                                               
+ oracle_install_db_MountPointLocation                                                              
+ oracle_install_db_QuickInstallOption          false                                               
+ oracle_install_db_ReceiveEmailNotification    false                                               
+ oracle_install_db_RecoveryBackUpLocation                                                          
+ oracle_install_db_RecoveryBackUpPassword      *Protected value, not to be logged*                 
+ oracle_install_db_RecoveryBackUpUsername                                                          
+ oracle_install_db_SID                                                                             
+ oracle_install_db_SecureConfigDisabled        false                                               
+ oracle_install_db_SetOracleBase               false                                               
+ oracle_install_db_StarterDatabaseType         GENERAL_PURPOSE                                     
+ oracle_install_db_StorageType                 0                                                   
+ oracle_install_db_SuperAdminPasswords         *Protected value, not to be logged*                 
+ oracle_install_db_SuperAdminSamePasswdForAll  *Protected value, not to be logged*                 
+ oracle_install_db_SystemClass                 DESKTOP_CLASS                                       
+ oracle_install_db_Type                        1                                                   
+ oracle_install_db_UseDBControl                true                                                
+ oracle_install_db_UseFileSystemForRecovery    false                                               
+ oracle_install_db_UseSamePassword             false                                               
+----------------------------------------------------------------------------------------------------
+
+INFO: Launching Oracle Database 11g Release 2 Installer
+INFO: Started executing the flow in INTERACTIVE mode
+INFO: Waiting for completion of background operations
+INFO: Finishing all forked tasks at state prepInstall
+INFO: Waiting for completion all forked tasks at state prepInstall
+INFO: All forked task are completed at state prepInstall
+INFO: Completed background operations
+INFO: Executing action at state prepInstall
+INFO: Completed executing action at state <prepInstall>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Moved to state <prepInstall>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Validating view at state <prepInstall>
+INFO: Completed validating view at state <prepInstall>
+INFO: Validating state <prepInstall>
+WARNING: Validation disabled for the state prepInstall
+INFO: Completed validating state <prepInstall>
+INFO: Verifying route success
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Executing action at state decideOCMInstall
+INFO: Completed executing action at state <decideOCMInstall>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Moved to state <decideOCMInstall>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Validating view at state <decideOCMInstall>
+INFO: Completed validating view at state <decideOCMInstall>
+INFO: Validating state <decideOCMInstall>
+WARNING: Validation disabled for the state decideOCMInstall
+INFO: Completed validating state <decideOCMInstall>
+INFO: Verifying route requireOCM
+INFO: Get view named [OCMDetailsUI]
+INFO: View for [OCMDetailsUI] is oracle.install.ivw.common.view.OCMDetailsGUI@fffa61
+INFO: Initializing view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Completed initializing view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Displaying view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Completed displaying view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Loading view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Completed loading view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Localizing view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Completed localizing view <OCMDetailsUI> at state <getOCMDetails>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Executing action at state getOCMDetails
+INFO: Completed executing action at state <getOCMDetails>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Moved to state <getOCMDetails>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Validating view at state <getOCMDetails>
+INFO: Completed validating view at state <getOCMDetails>
+INFO: Validating state <getOCMDetails>
+SEVERE: You have not provided an email address.
+
+Do you wish to remain uninformed of critical security issues in your configuration?
+INFO: Completed validating state <getOCMDetails>
+INFO: Verifying route success
+INFO: Get view named [InstallOptionsUI]
+INFO: InstallOptionsUI Entering Constructor
+INFO: InstallOptionsUI Exiting Constructor
+INFO: View for [InstallOptionsUI] is oracle.install.ivw.db.view.InstallOptionsUI@15cd9a
+INFO: Initializing view <InstallOptionsUI> at state <installOptions>
+INFO: Completed initializing view <InstallOptionsUI> at state <installOptions>
+INFO: Displaying view <InstallOptionsUI> at state <installOptions>
+INFO: Completed displaying view <InstallOptionsUI> at state <installOptions>
+INFO: Loading view <InstallOptionsUI> at state <installOptions>
+INFO: Completed loading view <InstallOptionsUI> at state <installOptions>
+INFO: Localizing view <InstallOptionsUI> at state <installOptions>
+INFO: Completed localizing view <InstallOptionsUI> at state <installOptions>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Executing action at state installOptions
+INFO: Completed executing action at state <installOptions>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Moved to state <installOptions>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: InstallOptions UI Entering & Exiting processInput
+INFO: Validating view at state <installOptions>
+INFO: Completed validating view at state <installOptions>
+INFO: Validating state <installOptions>
+INFO: Completed validating state <installOptions>
+INFO: InstallOptionsAction Actions.transition called
+INFO: selectedInstallOption is :INSTALL_DB_AND_CONFIG
+INFO: launchNETCA = true
+INFO: Verifying route system_class
+INFO: Get view named [SystemClassUI]
+INFO: SystemClassUI Entering Constructor
+INFO: SystemClassUI Exiting Constructor
+INFO: View for [SystemClassUI] is oracle.install.ivw.db.view.SystemClassUI@1adbfde
+INFO: Initializing view <SystemClassUI> at state <getSystemClass>
+INFO: Completed initializing view <SystemClassUI> at state <getSystemClass>
+INFO: Displaying view <SystemClassUI> at state <getSystemClass>
+INFO: Completed displaying view <SystemClassUI> at state <getSystemClass>
+INFO: Loading view <SystemClassUI> at state <getSystemClass>
+INFO: Completed loading view <SystemClassUI> at state <getSystemClass>
+INFO: Localizing view <SystemClassUI> at state <getSystemClass>
+INFO: Completed localizing view <SystemClassUI> at state <getSystemClass>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Executing action at state getSystemClass
+INFO: Completed executing action at state <getSystemClass>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Moved to state <getSystemClass>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: SystemClassUI Entering & Exiting processInput
+INFO: Validating view at state <getSystemClass>
+INFO: Completed validating view at state <getSystemClass>
+INFO: Validating state <getSystemClass>
+INFO: Completed validating state <getSystemClass>
+INFO: selectedSystemClass is :DESKTOP_CLASS
+INFO: Verifying route desktop_class_yes
+INFO: Get view named [QuickInstallUI]
+INFO: inventory location isC:\Program Files (x86)\Oracle\Inventory
+INFO: inventory location isC:\Program Files (x86)\Oracle\Inventory
+WARNING: SRVCTL not found as there is no Grid Infrastructure home on the box
+WARNING: KFOD not found at 
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+INFO: View for [QuickInstallUI] is oracle.install.ivw.db.view.QuickInstallUI@1135cd9
+INFO: Initializing view <QuickInstallUI> at state <quickInstallPage>
+INFO: Completed initializing view <QuickInstallUI> at state <quickInstallPage>
+INFO: Displaying view <QuickInstallUI> at state <quickInstallPage>
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for PEinstall is 0.0
+INFO: Completed displaying view <QuickInstallUI> at state <quickInstallPage>
+INFO: Loading view <QuickInstallUI> at state <quickInstallPage>
+INFO: Completed loading view <QuickInstallUI> at state <quickInstallPage>
+INFO: Localizing view <QuickInstallUI> at state <quickInstallPage>
+INFO: Completed localizing view <QuickInstallUI> at state <quickInstallPage>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Executing action at state quickInstallPage
+INFO: Completed executing action at state <quickInstallPage>
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Moved to state <quickInstallPage>
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Validating view at state <quickInstallPage>
+INFO: Completed validating view at state <quickInstallPage>
+INFO: Validating state <quickInstallPage>
+INFO: Validating specified location...
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+INFO: custom prereq file name: oracle.server_NONE.xml
+INFO: refDataFile: C:\Users\S.Naveen\Downloads\database 2\stage\cvu\oracle.server_NONE.xml
+INFO: isCustomRefDataFilePresent: false
+INFO: InstallAreaControl exists: false
+INFO: Checking:NEW_HOME
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:ORCA_HOME
+INFO: Reading shiphome metadata from C:\Users\S.Naveen\Downloads\database 2\install\..\stage\shiphomeproperties.xml
+INFO: Loading beanstore from file:/C:/Users/S.Naveen/Downloads/database 2/install/../stage/shiphomeproperties.xml
+INFO: Translating external format into raw format 
+INFO: Restoring class oracle.install.driver.oui.ShiphomeMetadata from file:/C:/Users/S.Naveen/Downloads/database 2/install/../stage/shiphomeproperties.xml
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: inventory location isC:\Program Files (x86)\Oracle\Inventory
+INFO: size estimation for EEinstall is 0.0
+INFO: inventory location isC:\Program Files (x86)\Oracle\Inventory
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+INFO: PATH has :==>C:\Users\S681E~1.NAV\AppData\Local\Temp\OraInstall2019-03-16_09-21-20AM\jdk\jre\bin;.;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Java\jdk-10.0.1\bin;
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+INFO: PATH has :==>C:\Users\S681E~1.NAV\AppData\Local\Temp\OraInstall2019-03-16_09-21-20AM\jdk\jre\bin;.;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Java\jdk-10.0.1\bin;
+INFO: Terminating all background operations
+INFO: Terminated all background operations
+WARNING: [WARNING] [INS-08109] Unexpected error occurred while validating inputs at state 'quickInstallPage'.
+   CAUSE: No additional information available.
+   ACTION: Contact Oracle Support Services or refer to the software manual.
+   SUMMARY:
+       - C:\Users\S.Naveen\AppData\Local\Temp\OraInstall2019-03-16_09-21-20AM\ext\bin\SID_Queries.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform.
+Refer associated stacktrace #oracle.install.commons.util.exception.DefaultErrorAdvisor:525
+INFO: Advice is CONTINUE
+INFO: Waiting for completion of background operations
+INFO: Completed background operations
+INFO: Validating view at state <quickInstallPage>
+INFO: Completed validating view at state <quickInstallPage>
+INFO: Validating state <quickInstallPage>
+INFO: Validating specified location...
+INFO: custom prereq file name: oracle.server_NONE.xml
+INFO: refDataFile: C:\Users\S.Naveen\Downloads\database 2\stage\cvu\oracle.server_NONE.xml
+INFO: isCustomRefDataFilePresent: false
+INFO: InstallAreaControl exists: false
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: Checking:NEW_HOME
+INFO: size estimation for SEinstall is 0.0
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+INFO: Checking:COMP
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: Checking:COMP
+INFO: Checking:ORCA_HOME
+INFO: Reading shiphome metadata from C:\Users\S.Naveen\Downloads\database 2\install\..\stage\shiphomeproperties.xml
+INFO: Loading beanstore from file:/C:/Users/S.Naveen/Downloads/database 2/install/../stage/shiphomeproperties.xml
+INFO: size estimation for EEinstall is 0.0
+INFO: Translating external format into raw format 
+INFO: Restoring class oracle.install.driver.oui.ShiphomeMetadata from file:/C:/Users/S.Naveen/Downloads/database 2/install/../stage/shiphomeproperties.xml
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+INFO: inventory location isC:\Program Files (x86)\Oracle\Inventory
+INFO: inventory location isC:\Program Files (x86)\Oracle\Inventory
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for SEinstall is 0.0
+WARNING: occured while trying to estimate sizejava.lang.NumberFormatException: null
+INFO: size estimation for EEinstall is 0.0
+INFO: PATH has :==>C:\Users\S681E~1.NAV\AppData\Local\Temp\OraInstall2019-03-16_09-21-20AM\jdk\jre\bin;.;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Java\jdk-10.0.1\bin;
+INFO: size estimation for EEinstall is 0.0
+INFO: PATH has :==>C:\Users\S681E~1.NAV\AppData\Local\Temp\OraInstall2019-03-16_09-21-20AM\jdk\jre\bin;.;C:\windows\system32;C:\windows;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Java\jdk-10.0.1\bin;
+INFO: Terminating all background operations
+INFO: Terminated all background operations
+WARNING: [WARNING] [INS-08109] Unexpected error occurred while validating inputs at state 'quickInstallPage'.
+   CAUSE: No additional information available.
+   ACTION: Contact Oracle Support Services or refer to the software manual.
+   SUMMARY:
+       - C:\Users\S.Naveen\AppData\Local\Temp\OraInstall2019-03-16_09-21-20AM\ext\bin\SID_Queries.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform.
+Refer associated stacktrace #oracle.install.commons.util.exception.DefaultErrorAdvisor:573
+INFO: Advice is WITHDRAW
+INFO: Adding ExitStatus FAILURE to the exit status set
+INFO: Finding the most appropriate exit status for the current application
+INFO: Exit Status is -1
+INFO: Shutdown Oracle Database 11g Release 2 Installer
+INFO: Unloading Setup Driver
